@@ -45,6 +45,8 @@ LABEL io.k8s.description="$DESCRIPTION" \
 COPY ./s2i/ $STI_SCRIPTS_PATH
 COPY ./contrib/ /opt/app-root
 
+USER root
+
 RUN /opt/app-root/etc/install_node.sh
 
 USER 1001
