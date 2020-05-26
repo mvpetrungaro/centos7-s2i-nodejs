@@ -1,4 +1,4 @@
-FROM centos/s2i-base-centos7
+FROM openshift/httpd
 # This image provides a Node.JS environment you can use to run your
 # Node.JS applications.
 
