@@ -2,6 +2,9 @@
 
 set -ex
 
+NODE_VERSION=12.10.0
+NPM_VERSION=6.10.3
+
 yum install -y git
 
 # Ensure git uses https instead of ssh for NPM install
@@ -20,7 +23,7 @@ git config --list
 yum install -y https://github.com/nodeshift/node-rpm/releases/download/v${NODE_VERSION}/rhoar-nodejs-${NODE_VERSION}-1.el7.centos.x86_64.rpm
 yum install -y https://github.com/nodeshift/node-rpm/releases/download/v${NODE_VERSION}/npm-${NPM_VERSION}-1.${NODE_VERSION}.1.el7.centos.x86_64.rpm
 
-rpm -V $INSTALL_PKGS
+#rpm -V $INSTALL_PKGS
 yum clean all -y
 ldconfig
 
